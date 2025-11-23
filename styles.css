@@ -117,27 +117,21 @@ nav ul li a:hover {
     padding: 0 20px;
 }
 
-/* Animation bounce (si pas encore dans ton CSS) */
-.bounce {
-    animation: bounce 3s infinite;
+.hero-phrase p {
+    font-size: 14px !important;
+    line-height: 1.2;
+    color: white;
+    margin: 0;
+    padding: 5px 10px;
+    text-align: center;
 }
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-/* ----- FIX MOBILE ----- */
+/* Pour mobile */
 @media (max-width: 768px) {
-    .hero-phrase {
-        font-size: 14px !important;   /* ← RÉDUCTION TEXTE */
-        bottom: 10px;                 /* ← LÉGÈREMENT PLUS HAUT */
-        line-height: 1.3;
-        padding: 0 10px;              /* ← Pour éviter dépassement */
-        width: 95%;
-    }
-
-    .hero-name {
+    .hero-phrase p {
+        font-size: 12px !important;
+    }
+}    .hero-name {
         font-size: 18px !important;   /* ← Correction du titre en haut */
     }
 }
@@ -498,5 +492,6 @@ footer p {
     font-size: 15px;
 
 }
+
 
 
