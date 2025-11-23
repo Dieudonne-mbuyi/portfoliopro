@@ -105,40 +105,41 @@ nav ul li a:hover {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Glass effect Phrase en bas */
+/* ----- PHRASE EN BAS (PC) ----- */
 .hero-phrase {
     position: absolute;
     bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 15px 25px;
-    border-radius: 12px;
-    max-width: 90%;
+    width: 90%;
     text-align: center;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.hero-phrase p {
-    font-size: 20px;
-    margin: 0;
-    color: #fcfd9d;
+    font-size: 26px;
     font-weight: 500;
+    color: white;
+    padding: 0 20px;
 }
 
-/* ---------- ANIMATION ---------- */
+/* Animation bounce (si pas encore dans ton CSS) */
+.bounce {
+    animation: bounce 3s infinite;
+}
+
 @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
 
-    0%,
-    100% {
-        transform: translate(-50%, 0);
+/* ----- FIX MOBILE ----- */
+@media (max-width: 768px) {
+    .hero-phrase {
+        font-size: 14px !important;   /* ← RÉDUCTION TEXTE */
+        bottom: 10px;                 /* ← LÉGÈREMENT PLUS HAUT */
+        line-height: 1.3;
+        padding: 0 10px;              /* ← Pour éviter dépassement */
+        width: 95%;
     }
 
-    50% {
-        transform: translate(-50%, -20px);
-    }
+    .hero-name {
+        font-size: 18px !important;   /* ← Correction du titre en haut */
+    }
 }
 
 .bounce {
@@ -497,4 +498,5 @@ footer p {
     font-size: 15px;
 
 }
+
 
