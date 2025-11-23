@@ -179,7 +179,21 @@ nav ul li a:hover {
 .hero-phrase p {
     font-size: 16px;
 }
+/* PC */
+.phrase-bondissante, .moving-text, .hero-bottom-text {
+    font-size: 32px;
+    font-weight: 600;
+}
 
+/* MOBILE */
+@media(max-width: 768px) {
+    .phrase-bondissante, .moving-text, .hero-bottom-text {
+        font-size: 16px !important;
+        line-height: 1.3;
+        padding: 0 10px;
+        text-align: center;
+    }
+}
 .btn {
     display: inline-block;
     padding: 12px 25px;
@@ -483,3 +497,4 @@ footer p {
     font-size: 15px;
 
 }
+
